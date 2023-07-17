@@ -64,7 +64,7 @@ basename_without_ext = os.path.splitext(os.path.basename(INPUT_FILE))[0]
 results_filename = basename_without_ext + "_results.txt"
 
 # Save results to text file
-with open(results_filename, "w") as f:
+with open(results_filename, "w", encoding="UTF-8") as f:
     f.write("*** Dublicate subjects with terminal periods: ***\n")
     for line in results:
         f.write(f"{line}\n")
